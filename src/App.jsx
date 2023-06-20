@@ -1,9 +1,6 @@
 import About from "./pages/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
-import "./App.css";
-import "./assets/scss/style.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import FAQPage from "./pages/Faq";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar/Navbar";
@@ -15,7 +12,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+
+
+
 function App() {
+
+
+  // const ScrollToTop = (props) => {
+  //   const location = useLocation();
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, [location]);
   return (
     <>
       <BrowserRouter>

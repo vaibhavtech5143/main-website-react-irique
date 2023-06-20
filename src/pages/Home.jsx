@@ -1,12 +1,16 @@
-import React from "react";
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/Navbar";
+
 import slide from "../assets/media/images/slide-img.jpg";
 import cloud from "../assets/media/images/cloud-payroll.png";
 import "swiper/swiper-bundle.min.css";
 import hrms from "../assets/media/images/hrms-sq.jpg";
 import payroll from "../assets/media/images/payroll-mgmt.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import  {Autoplay}  from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Home = () => {
   return (
@@ -17,12 +21,14 @@ const Home = () => {
             <div className="row m-0 align-items-center">
               <div className="col-xxl-7 col-xl-6 col-md-6 col-12">
                 <Swiper
+               
                   autoplay={{
-                    delay: 3000,
+                    delay: 1000,
                     disableOnInteraction: false,
                   }}
-                  loop={true}
-                >
+                  modules={[Autoplay]}
+              
+    >
                   {/* Slides */}
                   <SwiperSlide>
                     <h5>#HRTech 4.0</h5>
