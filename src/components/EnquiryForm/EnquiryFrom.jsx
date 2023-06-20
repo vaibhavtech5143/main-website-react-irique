@@ -1,5 +1,5 @@
-import React from "react";
 
+// import "./enquiryform.css";
 const EnquiryForm = () => {
   return (
     <div className="form-wrap">
@@ -92,12 +92,12 @@ const EnquiryForm = () => {
             rows="10"
           ></textarea>
         </div>
-        <div className="mb-3">
+        <div className="mb-3 d-flex gap-2">
           <input
             type="submit"
             name="enquiry_submit"
             value="Send Message"
-            className="btn btn-theme-brand"
+            className="btn btn-theme-brand "
           />
           <input
             type="reset"

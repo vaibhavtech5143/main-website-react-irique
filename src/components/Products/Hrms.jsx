@@ -1,9 +1,10 @@
-import React from "react";
-import cloud from "../../assets/media/images/cloud-payroll.png";
-import Swiper from "swiper";
+
+// import cloud from "../../assets/media/images/cloud-payroll.png";
+
+// import "../../components/Products/products.css";
 import slide from "../../assets/media/images/slide-img.jpg";
-import payroll from "../../assets/media/images/payroll-mgmt.jpg";
-import hrms from "../../assets/media/images/hrms-sq.jpg";
+// import payroll from "../../assets/media/images/payroll-mgmt.jpg";
+// import hrms from "../../assets/media/images/hrms-sq.jpg";
 
 const Hrms = () => {
   return (

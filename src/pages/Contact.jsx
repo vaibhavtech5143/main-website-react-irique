@@ -1,8 +1,6 @@
-import React from "react";
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/Navbar";
-import EnquiryForm from "../components/EnquiryForm/EnquiryFrom";
 
+import EnquiryForm from "../components/EnquiryForm/EnquiryFrom";
+// import "./contact.css";
 const Contact = () => {
   return (
     <>
@@ -11,11 +9,11 @@ const Contact = () => {
           <div className="container">
             <div className="section-title mb-4">
               <h1>Contact Us</h1>
-              <p>
+              {/* <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                 aspernatur ducimus suscipit labore consectetur sed fugit neque
                 aliquid voluptatibus obcaecati?
-              </p>
+              </p> */}
             </div>
             <div className="row m-0">
               <div className="col-md-6 col-12">
@@ -47,3 +45,134 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+// import { useState } from "react";
+// // import "./enquiryform.css";
+// const EnquiryForm = () => {
+//   let [formData, setformData] = useState();
+//   let handlechangefun = (e) => {
+//     setformData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+//   console.log(formData);
+//   return (
+//     <div className="form-wrap">
+//       <form method="POST" action="Pages/api_place_enquiry">
+//         <div className="mb-3">
+//           <label htmlFor="exampleInputName" className="form-label">
+//             Your Name
+//           </label>
+//           <input
+//             required
+//             type="text"
+//             name="name"
+//             className="form-control"
+//             id="exampleInputName"
+//             aria-describedby="nameHelp"
+//             onChange={handlechangefun}
+//           />
+//         </div>
+//         <div className="mb-3">
+//           <label htmlFor="exampleInputCompany" className="form-label">
+//             Company Name
+//           </label>
+//           <input
+//             required
+//             type="text"
+//             name="company_name"
+//             className="form-control"
+//             id="exampleInputCompany"
+//             aria-describedby="companyHelp"
+//             onChange={handlechangefun}
+//           />
+//         </div>
+//         <div className="mb-3">
+//           <label htmlFor="exampleInputEmail1" className="form-label">
+//             Email address
+//           </label>
+//           <input
+//             required
+//             type="email"
+//             name="email"
+//             className="form-control"
+//             id="exampleInputEmail1"
+//             aria-describedby="emailHelp"
+//             onChange={handlechangefun}
+//           />
+//           <div id="emailHelp" className="form-text">
+//             We'll never share your email with anyone else.
+//           </div>
+//         </div>
+//         <div className="mb-3">
+//           <label htmlFor="exampleInputContact" className="form-label">
+//             Contact Number
+//           </label>
+//           <input
+//             required
+//             type="text"
+//             name="contact"
+//             className="form-control"
+//             id="exampleInputContact"
+//             aria-describedby="contactHelp"
+//             onChange={handlechangefun}
+//           />
+//         </div>
+//         <div className="mb-3">
+//           <label htmlFor="exampleInputSoftware" className="form-label">
+//             Select Software
+//           </label>
+//           <select
+//             required
+//             name="software"
+//             className="form-control"
+//             id="exampleInputSoftware"
+//             aria-describedby="contactHelp"
+//             onChange={handlechangefun}
+//           >
+//             <option value="HRMS on Cloud (SAAS)">HRMS on Cloud (SAAS)</option>
+//             <option value="Payroll Outsourcing">Payroll Outsourcing</option>
+//             <option value="Human Resource Management Software">
+//               Human Resource Management Software
+//             </option>
+//             <option value="Payroll Management Software">
+//               Payroll Management Software
+//             </option>
+//           </select>
+//         </div>
+//         <div className="mb-3">
+//           <label htmlFor="exampleInputMessage" className="form-label">
+//             Write Your Message
+//           </label>
+//           <textarea
+//             name="message"
+//             className="form-control"
+//             id="exampleInputMessage"
+//             aria-describedby="messageHelp"
+//             rows="10"
+//             onChange={handlechangefun}
+//           ></textarea>
+//         </div>
+//         <div className="mb-3">
+//           <input
+//             type="submit"
+//             name="enquiry_submit"
+//             value="Send Message"
+//             className="btn btn-theme-brand"
+//             onChange={handlechangefun}
+//           />
+//           <input
+//             type="reset"
+//             value="Clear"
+//             className="btn btn-theme-light-accent"
+//             onChange={handlechangefun}
+//           />
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default EnquiryForm;

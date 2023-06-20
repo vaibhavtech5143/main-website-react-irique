@@ -1,6 +1,6 @@
-import React from "react";
-import slide from "../../assets/media/images/slide-img.jpg";
 
+import slide from "../../assets/media/images/slide-img.jpg";
+// import "../../components/Products/products.css";
 const Pms = () => {
   return (
     <>

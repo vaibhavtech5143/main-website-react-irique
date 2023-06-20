@@ -1,7 +1,6 @@
-import Navbar from "../components/Navbar/Navbar";
-import slide from "../assets/media/images/slide-img.jpg";
-import Footer from "../components/Footer/Footer";
 
+import slide from "../assets/media/images/slide-img.jpg";
+// import "../"
 const About = () => {
   return (
     <div>
