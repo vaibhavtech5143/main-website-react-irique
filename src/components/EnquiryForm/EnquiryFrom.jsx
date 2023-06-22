@@ -1,9 +1,8 @@
-
 // import "./enquiryform.css";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 // import { Logger } from 'sass';
 // import "./enquiryform.css";
 const EnquiryForm = () => {
@@ -16,38 +15,39 @@ const EnquiryForm = () => {
     });
   };
 
-// console.log(formData);
-
+  // console.log(formData);
+  let emptyformData = () => {
+    setFormData({});
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post(
-        'https://rajhalfapi-shivam-53.vercel.app/contact',
-        {...formData }, // Wrap formData inside an object with a key 'data'
+        "https://mongo-backend-rajnishad24082003.vercel.app/contact",
+        { ...formData }, // Wrap formData inside an object with a key 'data'
         {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         }
       );
 
       if (response.status === 201) {
-        toast.success('Form submitted successfully!', {
+        toast.success("Form submitted successfully!", {
           position: toast.POSITION.TOP_RIGHT,
         });
-        setFormData({});
       } else {
-        toast.error('Form submission failed!', {
+        toast.error("Form submission failed!", {
           position: toast.POSITION.TOP_RIGHT,
         });
       }
     } catch (error) {
       console.error(error);
-      toast.error('Form submission failed!', {
+      toast.error("Form submission failed!", {
         position: toast.POSITION.TOP_RIGHT,
       });
     }
+    emptyformData();
   };
 
   // console.log(formData);
@@ -55,7 +55,7 @@ const EnquiryForm = () => {
     <div className="form-wrap">
       {/* <form method="POST" action="Pages/api_place_enquiry"> */}
       {/* onSubmit={handleSubmit} */}
-      <form   onSubmit={handleSubmit}> 
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputName" className="form-label">
             Your Name
@@ -63,6 +63,7 @@ const EnquiryForm = () => {
           <input
             required
             type="text"
+            value={formData.customerName ? formData.customerName : ""}
             name="customerName"
             className="form-control"
             id="exampleInputName"
@@ -75,8 +76,8 @@ const EnquiryForm = () => {
             Company Name
           </label>
           <input
-           
             type="text"
+            value={formData.companyName ? formData.companyName : ""}
             name="companyName"
             className="form-control"
             id="exampleInputCompany"
@@ -91,6 +92,7 @@ const EnquiryForm = () => {
           <input
             required
             type="email"
+            value={formData.emailAddress ? formData.emailAddress : ""}
             name="emailAddress"
             className="form-control"
             id="exampleInputEmail1"
@@ -108,6 +110,7 @@ const EnquiryForm = () => {
           <input
             required
             type="text"
+            value={formData.contactNumber ? formData.contactNumber : ""}
             name="contactNumber"
             className="form-control"
             id="exampleInputContact"
@@ -121,12 +124,14 @@ const EnquiryForm = () => {
           </label>
           <select
             required
+            value={formData.selectSoftware ? formData.selectSoftware : ""}
             name="selectSoftware"
             className="form-control"
             id="exampleInputSoftware"
             aria-describedby="contactHelp"
             onChange={handlechangefun}
           >
+            <option value="Other">Select an option</option>
             <option value="HRMS on Cloud (SAAS)">HRMS on Cloud (SAAS)</option>
             <option value="Payroll Outsourcing">Payroll Outsourcing</option>
             <option value="Human Resource Management Software">
@@ -134,9 +139,6 @@ const EnquiryForm = () => {
             </option>
             <option value="Payroll Management Software">
               Payroll Management Software
-            </option>
-            <option value="Other">
-              Other
             </option>
           </select>
         </div>
@@ -146,6 +148,7 @@ const EnquiryForm = () => {
           </label>
           <textarea
             name="message"
+            value={formData.message ? formData.message : ""}
             className="form-control"
             id="exampleInputMessage"
             aria-describedby="messageHelp"
@@ -160,7 +163,6 @@ const EnquiryForm = () => {
             value="Send Message"
             className="btn btn-theme-brand mx-2"
             // onChange={handlechangefun}
-           
           />
           <input
             type="reset"
@@ -169,11 +171,10 @@ const EnquiryForm = () => {
             // onChange={handlechangefun}
           />
         </div>
-      <ToastContainer/>
+        <ToastContainer />
       </form>
     </div>
   );
 };
 
 export default EnquiryForm;
-
