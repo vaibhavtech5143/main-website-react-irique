@@ -212,7 +212,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item enquiry">
-                  <Link className={"nav-link btn btn-theme-brand"} to="#">
+                  <Link className={"nav-link btn btn-theme-brand"} to="/contact">
                     <i className="fa-solid fa-envelope link-icon-left"></i>Place
                     an Enquiry
                   </Link>
