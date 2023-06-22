@@ -170,95 +170,120 @@ const About = () => {
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
-                    
+                    <div className="media-content">
+                      <img src={website} alt="" />
+                    </div>
+                    <div className="text-contend">
+                      <h3>
+                        <b>Website &amp; Application</b> Development
+                      </h3>
+                      <p>
+                        Developing customized websites &amp; applications with
+                        Digital Marketing ensuring a highly satisfying user
+                        experience.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
                     <div className="media-content">
-
-
-                    <img src={saas} alt="" />
+                      <img src={saas} alt="" />
                     </div>
 
-                    <div className="txt-content">
-                    <h3>
-                      <b>SaaS</b> Development
-                    </h3>
-                    <p>
-                      Developing custom solutions for SaaS companies to provide
-                      their clients with access to online applications.
-                    </p>
-
+                    <div className="text-content">
+                      <h3>
+                        <b>SaaS</b> Development
+                      </h3>
+                      <p>
+                        Developing custom solutions for SaaS companies to
+                        provide their clients with access to online
+                        applications.
+                      </p>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
                     <div className="media-content">
-
-
-                    <img src={custom} alt="" />
+                      <img src={custom} alt="" />
                     </div>
-                    <h3>
-                      <b>Custom Product</b> Development
-                    </h3>
-                    <p>
-                      In order to generate revenue through monetization, custom
-                      product development.
-                    </p>
+                    <div className="text-content">
+                      <h3>
+                        <b>Custom Product</b> Development
+                      </h3>
+                      <p>
+                        In order to generate revenue through monetization,
+                        custom product development.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
-                    <img src={automation} alt="" />
-                    <h3>
-                      <b>Digital</b> Process Automation
-                    </h3>
-                    <p>
-                      Design &amp; implement process architectures, establish
-                      process measurement solutions in alignment with your
-                      goals.
-                    </p>
+                    <div className="media-content">
+                      <img src={automation} alt="" />
+                    </div>
+                    <div className="text-content">
+                      <h3>
+                        <b>Digital</b> Process Automation
+                      </h3>
+                      <p>
+                        Design &amp; implement process architectures, establish
+                        process measurement solutions in alignment with your
+                        goals.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
-                    <img src={cyber} alt="" />
-                    <h3>
-                      Cyber <b>Security</b>
-                    </h3>
-                    <p>
-                      Cybersecurity is the protection of internet-connected
-                      systems such as hardware, software and data from
-                      cyberthreats.
-                    </p>
+                    <div className="media-content">
+                      <img src={cyber} alt="" />
+                    </div>
+                    <div className="text-content">
+                      <h3>
+                        Cyber <b>Security</b>
+                      </h3>
+                      <p>
+                        Cybersecurity is the protection of internet-connected
+                        systems such as hardware, software and data from
+                        cyberthreats.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
-                    <img src={cyberPro} alt="" />
-                    <h3>
-                      Cyber <b>Protection</b>
-                    </h3>
-                    <p>
-                      Cyber protection refers to the set of measures and
-                      practices that are implemented to safeguard digital
-                      devices, networks, systems.
-                    </p>
+                    <div className="media-content">
+                      <img src={cyberPro} alt="" />
+                    </div>
+                    <div className="text-content">
+                      <h3>
+                        Cyber <b>Protection</b>
+                      </h3>
+                      <p>
+                        Cyber protection refers to the set of measures and
+                        practices that are implemented to safeguard digital
+                        devices, networks, systems.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
                   <div className="service">
-                    <img src={networking} alt="" />
-                    <h3>
-                      <b>Networking and Data</b> Protection
-                    </h3>
-                    <p>
-                      Networking and data protection are closely related
-                      concepts in the field of cybersecurity.
-                    </p>
+                    <div className="media-content">
+                      <img src={networking} alt="" />
+                    </div>
+                    <div className="text-content">
+                      <h3>
+                        <b>Networking and Data</b> Protection
+                      </h3>
+                      <p>
+                        Networking and data protection are closely related
+                        concepts in the field of cybersecurity.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -284,28 +309,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

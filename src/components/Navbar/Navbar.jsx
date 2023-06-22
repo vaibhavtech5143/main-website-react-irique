@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import hrms from "../../assets/media/images/hrms-small-banner.jpeg";
 import logo from "../../assets/media/logo.svg";
 // import "./navbar.css";
 const Navbar = () => {
@@ -48,13 +49,10 @@ const Navbar = () => {
             <div className="col-auto">
               <ul className="nav">
                 <li className="nav-item">
-                  <a
-                    to="https://iriquehitech.com/put-enquiry"
-                    className="nav-link"
-                  >
+                  <Link to="/contact" className="nav-link">
                     <i className="fa-solid fa-envelope link-icon-left"></i>
                     Request a Free Demo
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -88,53 +86,110 @@ const Navbar = () => {
                     About&nbsp;Us
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <Link
+                <li className="nav-item dropdown position-static">
+                  <a
                     className="nav-link dropdown-toggle"
-                    to="#"
+                    href="#"
+                    id="navbarDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Our Products
-                  </Link>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" to="/products/all">
-                        <i className="fa-solid fa-caret-right link-icon-left"></i>
-                        Payroll Outsourcing
-                      </Link>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" to="/products/hrms">
-                        <i className="fa-solid fa-caret-right link-icon-left"></i>
-                        Human Resource Management Software
-                      </a>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="#">
-                        <i className="fa-solid fa-caret-right link-icon-left"></i>
-                        HRMS on Cloud (SAAS)
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/products/pms">
-                        <i className="fa-solid fa-caret-right link-icon-left"></i>
-                        Payroll Management Software
-                      </Link>
-                    </li>
-                    <li>
-                      {/* <Link className="dropdown-item" to="#">
-                        <i className="fa-solid fa-caret-right link-icon-left"></i>
-                        Product 1
-                      </Link> */}
-                    </li>
-                    {/* <li><hr className="dropdown-divider"></li> */}
-                  </ul>
+                    Products &amp; Services
+                  </a>
+                  <div
+                    className="dropdown-menu mega-menu w-100 mt-0"
+                    aria-labelledby="navbarDropdown"
+                    style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+                    data-bs-popper="static"
+                  >
+                    <div className="container">
+                      <div className="row my-md-4">
+                        <div className="col-md-6 col-xl-3 mb-3 mb-xl-0">
+                          <div className="pt-2">
+                            <p className="text-uppercase font-weight-bold">
+                              Featured Product
+                            </p>
+                            <div
+                              className="bg-image hover-overlay shadow-1-strong rounded ripple mb-4"
+                              data-bs-ripple-color="light"
+                            >
+                              <img src={hrms} className="w-100" />
+                            </div>
+                            <Link to="/products/hrms" className="text-dark">
+                              <h5>HRMS on Cloud (SaaS)</h5>
+                              <p>
+                                Find and hire the right talent – faster and
+                                smarter with our AI-powered recruitment
+                                platform.
+                              </p>
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="col-md-6 col-xl-5 mb-3 mb-md-0">
+                          <div className="list-group list-group-flush">
+                            <p className="mb-0 list-group-item text-uppercase font-weight-bold">
+                              Our Products
+                            </p>
+                            <Link
+                              className="list-group-item list-group-item-action"
+                              to="/products/hrms"
+                            >
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Human Resource Management Software
+                            </Link>
+                            <Link
+                              className="list-group-item list-group-item-action"
+                              to="/products/hrms"
+                            >
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              HRMS on Cloud (SaaS)
+                            </Link>
+                            <Link
+                              className="list-group-item list-group-item-action"
+                              to="/products/pms"
+                            >
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Payroll Management Software
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="col-md-6 col-xl-4">
+                          <div className="list-group list-group-flush">
+                            <p className="mb-0 list-group-item text-uppercase font-weight-bold">
+                              Our Services
+                            </p>
+                            <a className="list-group-item list-group-item-action">
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Payroll Outsourcing
+                            </a>
+                            <a className="list-group-item list-group-item-action">
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Compliance Outsourcing
+                            </a>
+                            <a className="list-group-item list-group-item-action">
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Technology Consulting Services
+                            </a>
+                            <a className="list-group-item list-group-item-action">
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Business Solutions Consulting
+                            </a>
+                            <a className="list-group-item list-group-item-action">
+                              <i className="fa-solid fa-caret-right link-icon-left"></i>
+                              Implementation Strategy Support
+                            </a>
+                            {/* <!-- <a className="list-group-item list-group-item-action" href="https://iriquehitech.com/product/payroll-outsourcing"><i className="fa-solid fa-caret-right link-icon-left"></i>Payroll Outsourcing</a>
+                    <a className="list-group-item list-group-item-action" href="https://iriquehitech.com/product/hrms-on-cloud"><i className="fa-solid fa-caret-right link-icon-left"></i>Compliance Outsourcing</a>
+                    <a className="list-group-item list-group-item-action" href="https://iriquehitech.com/product/payroll-management-system"><i className="fa-solid fa-caret-right link-icon-left"></i>Technology Consulting Services</a>
+                    <a className="list-group-item list-group-item-action" href="https://iriquehitech.com/product/payroll-management-system"><i className="fa-solid fa-caret-right link-icon-left"></i>Business Solutions Consulting</a>
+                    <a className="list-group-item list-group-item-action" href="https://iriquehitech.com/product/payroll-management-system"><i className="fa-solid fa-caret-right link-icon-left"></i>Implementation Strategy Support</a> --> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
-
-                
-
 
                 {/* <li className="nav-item">
                   <Link className="nav-link disabled" to="#">

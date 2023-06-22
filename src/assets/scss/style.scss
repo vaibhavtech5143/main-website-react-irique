@@ -23,7 +23,6 @@ a {
       margin-left: 0.5rem;
     }
   }
-
 }
 
 .wrapper {
@@ -61,13 +60,11 @@ header {
 
     .nav-item {
       .nav-link {
-
         &:hover,
         &:active,
         &:focus {
           background-color: darken($color: $theme-dark-accent, $amount: 10);
           color: inherit;
-
         }
       }
     }
@@ -109,7 +106,13 @@ header {
     }
   }
 }
-
+.feature {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.feature:hover {
+  background-color: darken($color: $theme-light-shades, $amount: 10);
+}
 main {
   section {
     &#products {
@@ -127,14 +130,25 @@ main {
 
   &#about-page {
     .service {
+      &:hover {
+        background-color: darken($color: $theme-light-shades, $amount: 10);
+      }
+      border: 1px solid black;
+      border-radius: 0.5rem;
+      height: 100%;
+      padding: 1rem;
       img {
         width: 8rem;
+      }
+      .media-content {
+        display: flex;
+        justify-content: center;
       }
     }
   }
 
-  &#products-page {}
-
+  &#products-page {
+  }
   &.contact-page {
     iframe {
       border: 0;
@@ -150,7 +164,6 @@ footer {
   font-weight: 300;
 
   .accordion {
-
     .accordion-item,
     .accordion-button {
       color: $theme-light-shades;
@@ -208,8 +221,10 @@ footer {
       }
 
       .accordion-button {
-        background-color: rgba($color: $theme-dark-shades,
-            $alpha: 0.1) !important;
+        background-color: rgba(
+          $color: $theme-dark-shades,
+          $alpha: 0.1
+        ) !important;
 
         &:focus {
           box-shadow: none;
