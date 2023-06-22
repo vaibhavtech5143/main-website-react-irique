@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../pages/upperfooter.css";
 const FAQPage = () => {
   return (
     <div>
@@ -619,6 +619,19 @@ const FAQPage = () => {
           </div>
         </section>
       </main>
+      <section className="upper_footer">
+        <div className="container">
+          <h2 className="section-title">
+            Have questions about how to manage and simplify your business using
+            software?
+          </h2>
+          <p>Book a free demo session with one of our expert consultants.</p>
+          <a className="btn btn-theme-dark-accent" href={`/put-enquiry`}>
+            <i className="fa-solid fa-envelope link-icon-left"></i>
+            Request a Free Demo
+          </a>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,9 +1,61 @@
 
 // import "./enquiryform.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
+import axios from 'axios';
+// import { Logger } from 'sass';
+// import "./enquiryform.css";
 const EnquiryForm = () => {
+  const [formData, setFormData] = useState({}); // Set initial state for formData
+  const handlechangefun = (e) => {
+    e.preventDefault();
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+// console.log(formData);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        'https://rajhalfapi-shivam-53.vercel.app/contact',
+        {...formData }, // Wrap formData inside an object with a key 'data'
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.status === 201) {
+        toast.success('Form submitted successfully!', {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+        setFormData({});
+      } else {
+        toast.error('Form submission failed!', {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('Form submission failed!', {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  };
+
+  // console.log(formData);
   return (
     <div className="form-wrap">
-      <form method="POST" action="Pages/api_place_enquiry">
+      {/* <form method="POST" action="Pages/api_place_enquiry"> */}
+      {/* onSubmit={handleSubmit} */}
+      <form   onSubmit={handleSubmit}> 
         <div className="mb-3">
           <label htmlFor="exampleInputName" className="form-label">
             Your Name
@@ -11,10 +63,11 @@ const EnquiryForm = () => {
           <input
             required
             type="text"
-            name="name"
+            name="customerName"
             className="form-control"
             id="exampleInputName"
             aria-describedby="nameHelp"
+            onChange={handlechangefun}
           />
         </div>
         <div className="mb-3">
@@ -22,12 +75,13 @@ const EnquiryForm = () => {
             Company Name
           </label>
           <input
-            required
+           
             type="text"
-            name="company_name"
+            name="companyName"
             className="form-control"
             id="exampleInputCompany"
             aria-describedby="companyHelp"
+            onChange={handlechangefun}
           />
         </div>
         <div className="mb-3">
@@ -37,10 +91,11 @@ const EnquiryForm = () => {
           <input
             required
             type="email"
-            name="email"
+            name="emailAddress"
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            onChange={handlechangefun}
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
@@ -53,10 +108,11 @@ const EnquiryForm = () => {
           <input
             required
             type="text"
-            name="contact"
+            name="contactNumber"
             className="form-control"
             id="exampleInputContact"
             aria-describedby="contactHelp"
+            onChange={handlechangefun}
           />
         </div>
         <div className="mb-3">
@@ -65,10 +121,11 @@ const EnquiryForm = () => {
           </label>
           <select
             required
-            name="software"
+            name="selectSoftware"
             className="form-control"
             id="exampleInputSoftware"
             aria-describedby="contactHelp"
+            onChange={handlechangefun}
           >
             <option value="HRMS on Cloud (SAAS)">HRMS on Cloud (SAAS)</option>
             <option value="Payroll Outsourcing">Payroll Outsourcing</option>
@@ -77,6 +134,9 @@ const EnquiryForm = () => {
             </option>
             <option value="Payroll Management Software">
               Payroll Management Software
+            </option>
+            <option value="Other">
+              Other
             </option>
           </select>
         </div>
@@ -90,24 +150,30 @@ const EnquiryForm = () => {
             id="exampleInputMessage"
             aria-describedby="messageHelp"
             rows="10"
+            onChange={handlechangefun}
           ></textarea>
         </div>
-        <div className="mb-3 d-flex gap-2">
+        <div className="mb-3">
           <input
             type="submit"
             name="enquiry_submit"
             value="Send Message"
-            className="btn btn-theme-brand "
+            className="btn btn-theme-brand mx-2"
+            // onChange={handlechangefun}
+           
           />
           <input
             type="reset"
             value="Clear"
-            className="btn btn-theme-light-accent"
+            className="btn my-2 btn-theme-light-accent"
+            // onChange={handlechangefun}
           />
         </div>
+      <ToastContainer/>
       </form>
     </div>
   );
 };
 
 export default EnquiryForm;
+

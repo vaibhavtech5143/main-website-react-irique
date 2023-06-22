@@ -1,23 +1,13 @@
 import React from "react";
 import Logo from "../../assets/media/logo.svg";
+
 import startupindia from "../../assets/media/images/startupindia.png";
 // import "./footer.css"
 const Footer = () => {
+
   return (
     <footer>
-      <section className="upper_footer">
-        <div className="container">
-          <h2 className="section-title">
-            Have questions about how to manage and simplify your business using
-            software?
-          </h2>
-          <p>Book a free demo session with one of our expert consultants.</p>
-          <a className="btn btn-theme-dark-accent" href={`/put-enquiry`}>
-            <i className="fa-solid fa-envelope link-icon-left"></i>
-            Request a Free Demo
-          </a>
-        </div>
-      </section>
+
       <section className="wrapper">
         <div className="container">
           <div className="row m-0">
@@ -27,30 +17,29 @@ const Footer = () => {
               </a>
             </div>
             <div className="col-lg-3 col-12">
-              <a href="mailto:contact@iriquehitech.com">
+              <a className="btn btn-theme-dark-accent mb-3" href="mailto:contact@iriquehitech.com">
                 <i className="fa-solid fa-envelope link-icon-left"></i>
                 contact@iriquehitech.com
               </a>
             </div>
+
             <div className="col-lg-3 col-12">
-              <a href="" className="btn btn-theme-brand">
+              <a className="btn btn-theme-light-accent mb-3" href="" >
                 <i className="fa-solid fa-envelope link-icon-left"></i>
                 Place an Enquiry
               </a>
             </div>
-            <div className="col-lg-3 col-12">Whatsapp/Call</div>
+            {/* <div className="col-lg-3 col-12">Whatsapp/Call</div> */}
           </div>
           <div className="row m-0">
             <div className="col-xl-3 col-lg-4 col-12">
               <section>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate aperiam animi magnam blanditiis, corrupti mollitia
-                  hic quae quis. Iure, ad qui. Laudantium, odio amet vitae nemo
-                  magnam totam corporis libero.
+                Irique Innovations assist customers in selecting the right technology stacks for their solutions. Be it a programming language or a ready-to-use platform, we help business review technologies pros and cons before starting business.
+                  
                 </p>
               </section>
-              <section className="social">
+              {/* <section className="social">
                 <ul className="nav">
                   <li className="nav-item">
                     <a href="" className="nav-link social-icon">
@@ -78,7 +67,7 @@ const Footer = () => {
                     </a>
                   </li>
                 </ul>
-              </section>
+              </section> */}
               <section>
                 <div className="accordion" id="accordionExample">
                   <div className="accordion-item">
@@ -100,8 +89,10 @@ const Footer = () => {
                       data-bs-parent="#accordionExample"
                     >
                       <div className="accordion-body">
-                        Office No. 107, 1st Floor,"TIMMY ARCADE", Makvana
-                        Road,Marol, Andheri(E), Mumbai-400059
+                        Address:<br />
+                        107, 1st Floor,Timmy Arcade, <br />
+                        Makvana Road,Marol, <br />
+                        Andheri(E), Mumbai-400059
                       </div>
                     </div>
                   </div>
@@ -124,8 +115,9 @@ const Footer = () => {
                       data-bs-parent="#accordionExample"
                     >
                       <div className="accordion-body">
-                        Office No. 107, 1st Floor,"TIMMY ARCADE", Makvana
-                        Road,Marol, Andheri(E), Mumbai-400059
+                      Address:<br/>
+                                        25 NORTH BRIDGE, <br/>
+                                        SINGAPORE - 179104;
                       </div>
                     </div>
                   </div>

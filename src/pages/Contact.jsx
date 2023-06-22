@@ -1,6 +1,8 @@
 
 import EnquiryForm from "../components/EnquiryForm/EnquiryFrom";
-// import "./contact.css";
+import "../pages/upperfooter.css";
+
+
 const Contact = () => {
   return (
     <>
@@ -24,21 +26,22 @@ const Contact = () => {
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.62256422336714!2d72.88133817624403!3d19.109365568574013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93f06462cb7%3A0xd418cbb1b36ea868!2sIrique%20Hi%20Tech%20Software!5e0!3m2!1sen!2sin!4v1685783887662!5m2!1sen!2sin"
                   className="map"
                   style={{ border: 0 }}
-                  allowfullscreen=""
+                  allowFullScreen=""
                   loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe> <i> Office No. 107, 1st Floor,"TIMMY ARCADE", Makvana Road,Marol,
+                Andheri(E), Mumbai-400059</i>
               </div>
             </div>
           </div>
         </section>
-        <section id="map"></section>
-        <section id="contact">
+        {/* <section id="map"></section> */}
+        {/* <section id="contact">
           <div className="container">
             Office No. 107, 1st Floor,"TIMMY ARCADE", Makvana Road,Marol,
             Andheri(E), Mumbai-400059
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );

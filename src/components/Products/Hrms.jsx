@@ -159,8 +159,8 @@ const Hrms = () => {
             </div>
           </div>
         </section>
-        <section id="reviews">Reviews</section>
-        <section id="talk">Talk to us</section>
+        {/* <section id="reviews">Reviews</section>
+        <section id="talk">Talk to us</section> */}
       </main>
     </>
   );
