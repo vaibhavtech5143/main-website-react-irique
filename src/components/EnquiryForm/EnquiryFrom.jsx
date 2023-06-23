@@ -23,7 +23,7 @@ const EnquiryForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://mongo-backend-rajnishad24082003.vercel.app/contact",
+        process.env.MONGO_URI,
         { ...formData }, // Wrap formData inside an object with a key 'data'
         {
           headers: {
